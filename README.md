@@ -59,7 +59,7 @@ You may edit the provided templates *only slightly*: **you may not edit their st
 
 ### Part 2 (300 points)
 
-**Add a form to the application in `SI364W18_HW2.py`, using `WTForms` syntax. The class name should be `AlbumEntryForm`.**
+**Add a form to the application in `SI364W18_HW2.py`, using `WTForms` syntax. The class name should be `AlbumEntryForm`.**
 
 The `AlbumEntryForm` should have the following fields:
 
