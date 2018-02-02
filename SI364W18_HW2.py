@@ -13,7 +13,7 @@
 #############################
 import requests
 import json
-from flask import Flask, request, render_template, url_for
+from flask import Flask, request, render_template, url_for, flash, redirect
 from flask_wtf import FlaskForm
 from wtforms import StringField, SubmitField, RadioField, ValidationError
 from wtforms.validators import Required
@@ -88,8 +88,8 @@ def album_result():
 
     if request.method == 'POST' and form.validate_on_submit():
         return render_template('album_result.html', form = form)
-        flash('All fields are required!')
-        return redirect(url_for('album_entry'))
+    flash('All fields are required!')
+    return redirect(url_for('album_entry'))
 
 if __name__ == '__main__':
     app.run(use_reloader=True,debug=True)
