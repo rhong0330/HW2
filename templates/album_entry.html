@@ -1,0 +1,12 @@
+{% block content %}
+<h1>Album Entry WTF-Form</h1>
+<form method="POST" action="http://localhost:5000/album_result">
+    {{ form.hidden_tag() }}
+    {% for message in get_flashed_messages() %}
+    {{ message }}
+    {% endfor %}
+    <h3>{{ form.albumName.label }} : {{ form.albumName() }}</h3>
+    <h3>{{ form.radio.label }} : {{ form.radio() }}</h3>
+    {{ form.submit() }}
+</form>
+{% endblock %}
